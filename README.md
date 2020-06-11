@@ -1,5 +1,5 @@
 ## bot-bom-dia
-A bot that send images via whatsapp with 'Bom dia', build in Node Js.
+A bot that send images via whatsapp with 'Bom dia', builded in Node Js.
 
 
 ```bash
