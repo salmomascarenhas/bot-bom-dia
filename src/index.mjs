@@ -74,17 +74,19 @@ function getCentralPositionOfDimension({imageDimension, textDimension}) {
         moment().format('dddd').toUpperCase()
     );
     
+
     const base64Image = await imageWithText.getBase64Async(jimp.MIME_JPEG);
-    
+  
     const whatsappClient = await wa.create();
 
     const groups = await whatsappClient.getAllGroups();
 
-    const familyGroups = await groups.filter( group => group.formattedTitle.indexOf('Família') !== -1);
+    const familyGroups = groups.filter(group => group.formattedTitle.indexOf("Família") !== -1);
 
-    for (let index = 0; index < familyGroups.length; index++) {
-        await whatsappClient.sendFile(familyGroups[index].id._serialized, base64Image, 'bomdia.jpg', 'ENVIADO DO BOT DO SALMO');
-        
+
+    for(let index = 0; index < familyGroups.length; index++){
+        await whatsappClient.sendFile(familyGroups[index].id, base64Image, 'bomdia.jpeg', "ENVIADO DO ROBÔ DO SALMO");
     }
+
 })()
 
