@@ -1,9 +1,8 @@
-# bot-bom-dia
+## bot-bom-dia
 A bot that send images via whatsapp with 'Bom dia', build in Node Js.
 
 
-ℹ️ How To Use
-
+```bash
 # Clone this repository
 $ git clone https://github.com/salmomascarenhas/bot-bom-dia
 
